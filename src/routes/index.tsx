@@ -347,13 +347,23 @@ function LandingPage() {
       </section>
 
       {/* Avantages */}
-      <section className="py-20">
-        <div className="mx-auto max-w-6xl px-4">
+      <section className="relative overflow-hidden py-20">
+        <div
+          className="absolute inset-0 bg-cover bg-center"
+          style={{ backgroundImage: `url(${heroSkyline})` }}
+          aria-hidden
+        />
+        <div
+          className="absolute inset-0 bg-primary/80"
+          aria-hidden
+        />
+
+        <div className="relative mx-auto max-w-6xl px-4">
           <div className="mx-auto max-w-2xl text-center">
-            <h2 className="text-3xl font-bold text-foreground sm:text-4xl">
+            <h2 className="text-3xl font-bold text-primary-foreground sm:text-4xl">
               Les avantages du livret
             </h2>
-            <p className="mt-3 text-muted-foreground">
+            <p className="mt-3 text-primary-foreground/85">
               Un placement pensé pour les épargnants exigeants — sécurité,
               rendement et simplicité.
             </p>
@@ -384,11 +394,11 @@ function LandingPage() {
             ].map(({ icon: Icon, title, desc }) => (
               <div
                 key={title}
-                className="rounded-lg border border-border bg-card p-6"
+                className="rounded-lg border border-primary-foreground/15 bg-primary-foreground/10 p-6 backdrop-blur-sm"
               >
-                <Icon className="h-8 w-8 text-primary" />
-                <h3 className="mt-4 text-lg font-semibold text-foreground">{title}</h3>
-                <p className="mt-2 text-sm text-muted-foreground">{desc}</p>
+                <Icon className="h-8 w-8 text-primary-foreground" />
+                <h3 className="mt-4 text-lg font-semibold text-primary-foreground">{title}</h3>
+                <p className="mt-2 text-sm text-primary-foreground/80">{desc}</p>
               </div>
             ))}
           </div>
