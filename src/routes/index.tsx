@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -463,13 +463,13 @@ function LandingPage() {
           </div>
           <div>
             <p className="text-sm font-semibold uppercase tracking-wider">
-              Mentions
+              Liens
             </p>
-            <p className="mt-3 text-xs leading-relaxed text-primary-foreground/70">
-              Les performances passées ne préjugent pas des performances
-              futures. Investir comporte des risques. Offre soumise à
-              conditions et à l'étude de votre dossier.
-            </p>
+            <div className="mt-3 space-y-2 text-sm">
+              <Link to="/mentions-legales" className="block text-primary-foreground/90 hover:underline hover:text-primary-foreground">
+                Mentions légales
+              </Link>
+            </div>
           </div>
         </div>
         <div className="border-t border-primary-foreground/15 py-4 text-center text-xs text-primary-foreground/60">
