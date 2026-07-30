@@ -25,10 +25,17 @@ import {
   Mail,
 } from "lucide-react";
 import heroSkyline from "@/assets/hero-skyline.jpg";
-import logoBce from "@/assets/logo-bce.png.asset.json";
-import logoAmf from "@/assets/logo-amf.png.asset.json";
-import logoAcpr from "@/assets/logo-acpr.png.asset.json";
-import partenairesLogos from "@/assets/partenaires-logos.png.asset.json";
+import logoBce from "@/assets/logo-bce.jpg";
+import logoAmf from "@/assets/logo-amf.webp";
+import logoAcpr from "@/assets/logo-acpr.jfif";
+import partenairesLogos from "@/assets/partenaires-logos.png";
+import partenaireBnp from "@/assets/partenaire-bnp.svg";
+import partenaireCA from "@/assets/partenaire-credit-agricole.svg";
+import partenaireBanquePostale from "@/assets/partenaire-banque-postale.svg";
+import partenaireCM from "@/assets/partenaire-credit-mutuel.svg";
+import partenaireCic from "@/assets/partenaire-cic.svg";
+import partenaireBP from "@/assets/partenaire-banque-populaire.svg";
+import partenaireCE from "@/assets/partenaire-caisse-epargne.svg";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -235,10 +242,16 @@ function LandingPage() {
           <span className="text-sm font-medium tracking-wide text-foreground/80">
             Livret agréé par :
           </span>
-          <div className="flex flex-wrap items-center justify-center gap-x-14 gap-y-4 sm:gap-x-16">
-            <img src={logoBce.url} alt="Banque Centrale Européenne" className="h-10 w-auto object-contain sm:h-12" />
-            <img src={logoAmf.url} alt="Autorité des Marchés Financiers" className="h-10 w-auto object-contain sm:h-12" />
-            <img src={logoAcpr.url} alt="ACPR — Banque de France" className="h-10 w-auto object-contain sm:h-12" />
+          <div className="flex flex-wrap items-center justify-center gap-x-14 gap-y-4 sm:gap-x-20">
+            <div className="flex h-14 items-center justify-center sm:h-16">
+              <img src={logoBce} alt="Banque Centrale Européenne" className="max-h-full w-auto" />
+            </div>
+            <div className="flex h-14 items-center justify-center sm:h-16">
+              <img src={logoAmf} alt="Autorité des Marchés Financiers" className="max-h-full w-auto" />
+            </div>
+            <div className="flex h-14 items-center justify-center sm:h-16">
+              <img src={logoAcpr} alt="ACPR — Banque de France" className="max-h-full w-auto" />
+            </div>
           </div>
         </div>
       </div>
@@ -333,15 +346,14 @@ function LandingPage() {
           <p className="text-center text-sm font-semibold uppercase tracking-wider text-muted-foreground">
             Nos partenaires bancaires
           </p>
-          <div className="mt-6 flex justify-center">
-            <img
-              src={partenairesLogos.url}
-              alt="Nos partenaires bancaires : Le Point, Banque Populaire, CIC"
-              className="h-20 w-auto object-contain sm:h-24"
-              width={1100}
-              height={115}
-              loading="lazy"
-            />
+          <div className="mt-8 flex flex-wrap items-center justify-center gap-x-12 gap-y-8 sm:gap-x-16">
+            <img src={partenaireBnp} alt="BNP Paribas" className="h-8 w-auto object-contain sm:h-10" loading="lazy" />
+            <img src={partenaireCA} alt="Crédit Agricole" className="h-8 w-auto object-contain sm:h-10" loading="lazy" />
+            <img src={partenaireBanquePostale} alt="La Banque Postale" className="h-8 w-auto object-contain sm:h-10" loading="lazy" />
+            <img src={partenaireCM} alt="Crédit Mutuel" className="h-8 w-auto object-contain sm:h-10" loading="lazy" />
+            <img src={partenaireCic} alt="CIC" className="h-8 w-auto object-contain sm:h-10" loading="lazy" />
+            <img src={partenaireBP} alt="Banque Populaire" className="h-8 w-auto object-contain sm:h-10" loading="lazy" />
+            <img src={partenaireCE} alt="Caisse d'Épargne" className="h-8 w-auto object-contain sm:h-10" loading="lazy" />
           </div>
         </div>
       </section>
